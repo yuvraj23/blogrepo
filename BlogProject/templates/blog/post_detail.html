@@ -1,0 +1,56 @@
+{%extends 'blog/base.html'%}
+{%block title_block%}
+
+{{post.title}}
+
+{%endblock%}
+
+
+{%block content_block%}
+
+<h1>{{post.title}}</h1>
+<p >Published on {{post.publish}} by {{post.author | title}}</p>
+<p >{{post.body|linebreaks}}</p>
+
+<center>
+  <a href="/{{post.id}}/share" class="btn btn-lg btn-success" >Share POST By Email</a>
+</center>
+
+{%with comments.count as comments_count%}
+<h2>{{comments_count}} Comment{{comments_count | pluralize}}</h2>
+{%endwith%}
+
+{%if comments%}
+    {%for comment in comments%}
+
+
+      <div class="commenttext">
+        <div class="card text-white bg-info mb-3" style="width: 82rem;">
+          <div class="card-header"><p id='ch'>Comment {{forloop.counter}} by {{comment.name}} on {{comment.created}}</p></div>
+          <div class="card-body">
+            <p class="card-text">{{comment.body|linebreaks}}</p>
+          </div>
+        </div>
+        </div>
+
+
+        {%endfor%}
+     {%else%}
+<p>There is no Comment Yet !!! </p>
+{%endif%}
+
+
+{%if csubmit%}
+  <h2>Your Comment Submit SuccessFully</h2>
+{%else%}
+<div >
+<form class="jumbotron" id="subcommentform" width='40px' method="post">
+  {{form.as_p}}
+  {%csrf_token%}
+  <input type="submit" class='btn btn-lg btn-success'  align='center' value="Submit Comment">
+</form>
+</div>
+{%endif%}
+
+
+{%endblock%}

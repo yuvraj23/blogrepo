@@ -1,0 +1,111 @@
+.content{
+  width:100%;
+  height: auto;
+  float:left;
+  padding: 0 0 0 30px;
+  background: #666666;
+  color: white;
+
+}
+
+#AddPost{
+  width: 60%;
+  height: quto;
+  float:left;
+  padding: 0 0 0 30px;
+  background: #666666;
+  color: white;
+}
+
+.sidebar{
+  width: 40%;
+  float:right;
+  padding:25px 20px 0px 25px;
+  background: red;
+  color: black;
+}
+
+h1{
+  text-align: center;
+  border-bottom: 1px solid red;
+  padding-bottom: 10px;
+}
+
+
+#date{
+
+font-size:20px;
+font-style: italic;
+}
+
+#pcount{
+  color: black;
+  background-color: violet;
+  font-size: 30px;
+
+}
+
+#anchor{
+color:  white;
+}
+a{
+  color: red;
+}
+
+
+.paginator{
+  color: white;
+}
+
+
+#emailtemplate{
+  color: red;
+  background-color: black
+}
+
+#sendmailbtn{
+  position: relative;
+  top: 23px;
+  left: -300px;
+  color: white;
+  text-align: 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+#subcommentform{
+  width: 450px;
+  height: 500px;
+  background-color: #d9d9d9;
+  color: #003300;
+
+}
+
+
+#ch{
+  color:black;
+  border: 20px;
+  font-size: 20px;
+}
+
+
+.commenttext{
+  width: 100px;
+  background-color: red;
+}
+.btn-primary.round {
+	border-radius: 100px;
+}
+
+.btn-primary {
+  background-color: yellow;
+  color:black;
+  font-style:italic, bold;
+
+}
+
+.btn-success {
+  background-color: black;
+  color:white;
+  font-style:italic, bold;
+}
